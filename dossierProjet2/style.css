@@ -8,8 +8,6 @@ body{
     margin: 2% 8%;
     padding: 1%;
     width: 90%;
-    font-size: 1em;
-    line-height: 1.7em;
     border: solid 1px;
     font-family: Raleway;
 }
@@ -34,7 +32,7 @@ ul li a{
 }
 
 nav.bar ul{
-    margin-inline-start: 200%;
+    margin-inline-start: 100%;
     display: inline-flex;
 }
 nav.bar ul li{
@@ -127,4 +125,155 @@ nav.bar ul li a:hover{
 }
 .filtre ul li a:hover{
     color: #0065FC;
+}
+
+/* Style pour section hébergement*/
+
+#hebergement{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-content:baseline;
+    margin-top: 0.3em;
+    
+}
+.col1{
+    width:65%;
+    background: #F2F2F2;
+    border-radius: 1.5em;
+    display: flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+   /* justify-self: self-start ;*/
+    justify-content: space-around;
+   /* align-content: flex-start;*/
+    padding: 1em 0.5em;
+    margin-block-start: 0;
+}
+
+.col1 h2{
+    width: 85%;
+    font-size: 1em;
+    padding: 1em 0.5em 2em 0.5em;
+}
+.col2 h2{
+    font-size: 1em;
+   padding: 1em 0.5em 2em 0.5em;
+   width: 85%;
+   align-items: stretch;
+}
+.col1 .leshotels {
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+   justify-content: space-evenly;
+  /*  justify-self: flex-start;*/
+  /*  align-content: space-evenly;*/
+    justify-content: space-around;
+}
+.col1 .hotel{
+    border-radius: 1em;
+    background: white;
+   /* margin-bottom: 0.5em;*/
+   max-height: 40%;
+   max-width:30%;
+   display:flex;
+   flex-direction: column;
+   flex-wrap:wrap;
+    text-decoration: none;
+}
+.col1 .photo{
+    width: 96%;
+    padding:0.3em;
+    height:60%;
+    overflow: hidden;
+    min-height:0;
+    min-width:0;
+    max-height:60%;
+}
+.col1 .photo img{
+    width:100%;
+    max-height:100%;
+    min-height: 0;
+    min-width:0;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+.col1 .texte{
+    color:black;
+    text-decoration: none;
+    font-size: 0.8em;
+    padding:0.5em;
+}
+.col1 .plus{
+    width:95%;
+    color:black;
+    text-decoration: none;
+    padding: 3em 1em;
+    font-weight: 600;
+}
+.col2{
+    width:30%;
+    background: #F2F2F2;
+    border-radius: 1.5em;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    padding:1em  0.5em;
+   justify-items:  flex-start;
+  /*  align-self: flex-start;
+    justify-content: space-between;*/
+}
+
+.col2 a{
+    border-radius: 1em;
+    background: white;
+    margin-bottom: 1.5em;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    width:100%;
+   height: 26%;
+    justify-content: space-between;
+    text-decoration: none;
+}
+.col2 .photo{
+    max-width: 40%;
+    height:95%;
+    padding: 0.5em;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    
+    min-height:0;
+    min-width:0;
+
+}
+.col2 .photo img{
+    overflow:hidden;
+    width:100%;
+    height:95%;
+    min-height: 0;
+    min-width:0;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    padding: 0.3 em;
+}
+.col2 .texte{
+    width: 50%;
+    padding: 0.5em;
+    font-size: 0.8em;
+    align-self: center;
+    color:black;
+    text-decoration: none;
+}
+.texte p:first-child {
+    font-weight:bold;
+}
+.texte p:nth-child(2) {
+    opacity: 0.5;
+}
+.star{
+    text-shadow: none;
+    padding: 0.3em;
 }
