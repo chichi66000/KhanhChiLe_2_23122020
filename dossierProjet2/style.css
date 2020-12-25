@@ -277,3 +277,59 @@ nav.bar ul li a:hover{
     text-shadow: none;
     padding: 0.3em;
 }
+h2 {
+    width: 85%;
+    font-size: 1em;
+    padding: 1em 0.5em 2em 0.5em;
+}
+#activite{
+    display: flex;
+    flex-wrap:wrap;
+    width:100%;
+    flex-direction:row;
+    justify-content: space-between;
+    
+   /* align-content:baseline;*/
+   /* margin-top: 0.3em;*/
+  /*  margin-block-start: 0;*/
+}
+#activite a {
+    text-decoration: none;
+}
+#activite p{
+    font-weight: 600;
+    color:black;
+    font-size: 0.8em;
+    padding: 1em 0.5em;
+}
+.colonne1 {
+    width:25%;
+    box-shadow: 0.2em 0.2em 0.2em #f6f6f6, -0.1em 0.2em #f6f6f6;
+    border-radius: 1em;
+    
+}
+
+.colonne1 img{
+    height: 90%;
+}
+.colonne2{
+    width:22%;
+    display:flex;
+    flex-direction: column;
+    
+    box-shadow: gray;
+    justify-content: space-between;
+}
+.colonne2 a {
+    height:40%;
+     box-shadow: 0.2em 0.2em 0.2em #f6f6f6, -0.1em 0.2em #f6f6f6;
+    border-radius: 1em;
+    
+}
+.act img{
+    border-radius: 1em;
+    width:100%;
+}
+.colonne2 .act img {
+   height:75%; 
+}
