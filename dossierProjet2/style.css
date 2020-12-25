@@ -306,13 +306,11 @@ h2 {
     width:22%;
     display:flex;
     flex-direction: column;
-    
-    box-shadow: gray;
     justify-content: space-between;
 }
 .colonne2 a {
     height:40%;
-     box-shadow: 0.2em 0.2em 0.2em #f6f6f6, -0.1em 0.2em #f6f6f6;
+    box-shadow: 0.2em 0.2em 0.2em #f6f6f6, -0.1em 0.2em #f6f6f6;
     border-radius: 1em;
     
 }
@@ -344,4 +342,124 @@ footer a{
 footer a:hover {
     opacity:1;
 }
+
+/* style pour mobile max-width:767px */
+@media screen and (max-width:767px) {
+    body{
+        margin: 1% auto;
+        width: 90%;
+        border-right:solid 0.1em;
+        border-left:none;
+        border-top:none;
+        border-bottom:none;
+        line-height: 1.7em;
+    }
+    /* style pour menu et logo */
+    .logo{
+        flex-basis: 100%;
+        flex-wrap:wrap;
+        display:flex;
+    }
+    .logo img{
+        width: 20%;
+        align-self: flex-start;
+    }
+    nav.bar ul {
+        margin-block-start: 0;
+        display:flex;
+        flex-direction:row-reverse;
+        flex-wrap: wrap;
+    }
     
+    /* style pour barre de recherche*/
+    .recherche .outil{
+        text-align: center;
+    }
+    .outil{
+        width: 100%;
+    }
+    .outil .fas {
+        width: 10%;
+        font-size: 1.7em;
+        padding: 0.2em 0.2em 0.55em 0.2em; 
+    }
+    #cherche{
+        width: 50%;
+    }
+    /* style pour le filtre */
+    .filtre ul {
+        display: flex;
+        flex-wrap:wrap;
+    }
+    .filtre ul li:first-child{
+        width: 100%;
+    }
+    .filtre ul li{
+       padding: 0.3em 0.1em;
+    }
+    .filtre ul li a{
+        font-size: 0.9em;
+    }
+    /*style pour hebergement*/
+    #hebergement{
+    display:flex;
+    flex-direction:column-reverse;
+    margin: 2em 0;
+    align-content:  space-between;
+    justify-content: space-between;
+    }
+      .col2{
+        width:90%;
+    }
+    .col2 a {
+        height: 10em;
+    }
+    .col1{
+        width:90%;
+        flex-direction:column;
+        margin-top: 2em;
+ 
+    }
+    .col1 .leshotels{
+        flex-direction:column;
+        width:100%;
+       
+        
+    }
+    .col1 .hotel {
+        max-width: 100%;
+        margin: 0.5em 0;
+        height: 16em;
+        line-height: 1.5em;
+    }
+    .col1 .plus{
+        padding: 0.5em 0.3em;
+    }
+    /* style activité */
+    #activite{
+        flex-direction:column;
+    }
+    .colonne1{
+        width: 95%;
+        margin: 0em 0.3em;
+        height: 18em;
+    }
+    .colonne1 img{
+        height: 14em;
+    }
+    .colonne2 {
+        width:98%;
+        height: 35em;
+    }
+    .colonne2 a {
+        height: 16em;
+        margin: 1.2em 0.3em;
+    }
+    /* style pour footer*/
+    footer{
+        flex-direction:column;
+    }
+    footer section{
+        margin: 1em 0.3em;
+    }
+} 
