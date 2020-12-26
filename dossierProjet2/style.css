@@ -28,18 +28,31 @@ ul li a{
 }
 .logo img{  
     width: 10%;
+    margin-right: 20%;
 }
-nav.bar ul{
+nav.bar {
+    width: 60%;
+}
+.bar ul{
+    display:flex;
+}
+.bar ul >div {
+    display:flex;
+    justify-content: space-evenly;
+}
+/*nav.bar ul{
     margin-inline-start: 100%;
     display: inline-flex;
-}
+}*/
 nav.bar ul li{
-    padding: 10% 20%;
+    padding: 0% 20%;
 }
 nav.bar ul li a{
    color:  #0065FC;
     font-weight: 500;
+    
 }
+
 nav.bar ul li a:hover{
     color: black;
 }
@@ -60,7 +73,7 @@ nav.bar ul li a:hover{
   background: #F2F2F2;
   width: 4%;
   color: black;
-  padding: 2% 1%;
+  padding: 2.2% 1.1%;
   text-align: center;
   border-radius: 30% 0% 0 30%;
 }
@@ -98,7 +111,7 @@ nav.bar ul li a:hover{
     color: black;
 }
 .filtre ul {
-    display: inline-flex;
+    display: flex;
    width: 100%;
 }
 .filtre ul li{
@@ -131,8 +144,9 @@ nav.bar ul li a:hover{
     display:flex;
     flex-direction:row;
     justify-content: space-evenly;
-    align-content:baseline;
+  /*  align-content:flex-start;*/
     margin: 2em 0;
+    
 }
 .col1{
     width:65%;
@@ -163,33 +177,33 @@ nav.bar ul li a:hover{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap; 
-   justify-content: space-evenly;
-    justify-content: space-around;
+   justify-content: space-between;
+   
 }
 .col1 .hotel{
     border-radius: 1em;
     background: white;
-   max-height: 40%;
+   height: 14em;
    max-width:30%;
    display:flex;
    flex-direction: column;
    flex-wrap:wrap;
-    text-decoration: none;
+   text-decoration: none;
+  margin-bottom: 1.5em;
 }
 .col1 .photo{
     width: 96%;
     padding:0.3em;
-    height:60%;
-    overflow: hidden;
-    min-height:0;
-    min-width:0;
+  /*  overflow: hidden;*/
+   /* min-height:0;
+    min-width:0;*/
     max-height:60%;
 }
 .col1 .photo img{
     width:100%;
-    max-height:100%;
-    min-height: 0;
-    min-width:0;
+   max-height:100%;
+  /*  min-height: 0;
+    min-width:0;*/
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
 }
@@ -231,19 +245,19 @@ nav.bar ul li a:hover{
 }
 .col2 .photo{
     max-width: 40%;
-    height:95%;
+    height: 10em;
     padding: 0.5em;
     border-top-left-radius: 1em;
     border-bottom-left-radius: 1em;
-    min-height:0;
-    min-width:0;
+   /* min-height:0;
+    min-width:0;*/
 }
 .col2 .photo img{
     overflow:hidden;
     width:100%;
     height:95%;
-    min-height: 0;
-    min-width:0;
+   /* min-height: 0;
+    min-width:0;*/
     border-top-left-radius: 1em;
     border-bottom-left-radius: 1em;
     padding: 0.3 em;
@@ -266,11 +280,11 @@ nav.bar ul li a:hover{
     text-shadow: none;
     padding: 0.3em;
 }
-h2 {
+/*h2 {
     width: 85%;
     font-size: 1em;
     padding: 1em 0.5em 2em 0.5em;
-}
+}*/
 
 /* Style pour section activité */
 
@@ -279,8 +293,7 @@ h2 {
     flex-wrap:wrap;
     width:100%;
     flex-direction:row;
-    justify-content: space-between;
-  
+    justify-content: space-between;  
 }
 
 #activite a {
@@ -296,7 +309,7 @@ h2 {
     width:25%;
     box-shadow: 0.2em 0.2em 0.2em #f6f6f6, -0.1em 0.2em #f6f6f6;
     border-radius: 1em;
-    
+    height:34em;
 }
 
 .colonne1 img{
@@ -307,9 +320,10 @@ h2 {
     display:flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 34em;
 }
 .colonne2 a {
-    height:40%;
+    height:47%;
     box-shadow: 0.2em 0.2em 0.2em #f6f6f6, -0.1em 0.2em #f6f6f6;
     border-radius: 1em;
     
@@ -358,18 +372,29 @@ footer a:hover {
     .logo{
         flex-basis: 100%;
         flex-wrap:wrap;
-        display:flex;
+        
     }
     .logo img{
         width: 20%;
         align-self: flex-start;
     }
-    nav.bar ul {
+    .bar ul{
+        flex-direction: column-reverse;
+    }
+    .bar ul > div{
+        display:flex;
+        flex-direction:row;
+        margin-left: -70%;
+    }
+    .bar ul li a :last-child{
+       margin: 0 65%;
+    }
+   /* nav.bar ul {
         margin-block-start: 0;
         display:flex;
         flex-direction:row-reverse;
         flex-wrap: wrap;
-    }
+    }*/
     
     /* style pour barre de recherche*/
     .recherche .outil{
@@ -441,7 +466,7 @@ footer a:hover {
     }
     .colonne1{
         width: 95%;
-        margin: 0em 0.3em;
+        margin: 1.2em 0.2em;
         height: 18em;
     }
     .colonne1 img{
@@ -450,10 +475,11 @@ footer a:hover {
     .colonne2 {
         width:98%;
         height: 35em;
+        margin: 1.2em 0.2em;
     }
     .colonne2 a {
         height: 16em;
-        margin: 1.2em 0.3em;
+       /* margin: 1.2em 0.3em;*/
     }
     /* style pour footer*/
     footer{
@@ -463,3 +489,6 @@ footer a:hover {
         margin: 1em 0.3em;
     }
 } 
+@media screen and (min-width:768px) and (max-width:1023px) {
+    
+}
