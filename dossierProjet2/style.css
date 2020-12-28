@@ -1,5 +1,4 @@
 /* style générale du body */
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 * , html{
     margin:0;
     padding:0;
@@ -11,14 +10,12 @@
         width: 90%;
         font-family: Raleway;
     }
-    .fas{
-        color: #0065FC;
-    }
     ul{
         list-style-type: none;
     }
-    ul li a{
+    a{
         text-decoration: none;
+        color: black;
     }
 
     /* Style pour logo - header */
@@ -26,25 +23,29 @@
         display: flex;
         justify-content: space-between;
     }
-    nav.bar ul {
+    nav.bar{
+        display:flex;
+        width: 70%;
+        justify-content: space-between;
+    }
+        nav.bar ul {
         width: 80%;
         display: flex;
-    }
-    nav.bar ul li{
+        justify-content: space-between;       
+        }
+        nav.bar ul li{
         padding: 0.7em 3em;
-        
-    }
-    nav.bar ul li a{
-    color:  #0065FC;
+        margin-left: 3rem;
+        }
+    .logo a{
+        color:  #0065FC;
         font-weight: 500;
     }
-
-    nav.bar ul li a:hover{
+    .logo a:hover{
         color: black;
         border-top: solid #0065FC 1px; 
         transition: 0.3s;
     }
-
     /* style pour barre de recherche*/
     .recherche p{
         opacity: 0.7;
@@ -58,31 +59,33 @@
         width: 60%;
     }
     .outil .fas {
-    background: #F2F2F2;
-    width: 4%;
-    color: black;
-    padding: 2.2% 1.1%;
-    text-align: center;
-    border-radius: 30% 0% 0 30%;
-    }
+        background: #F2F2F2;
+        width: 4%;
+        color: black;
+        padding: 2.2% 1.1%;
+        text-align: center;
+        border-radius: 30% 0% 0 30%;
+        }
     .click{
-    background:#0065FC;
-    padding: 1%;
-    margin: 0;
-    height: 3.5em;
-    text-align: center;
-    border-top-right-radius: 1.1em;
-    border-bottom-right-radius: 1.1em;
-    color: white;
-    border:none;
-    font-weight: bold;
-    cursor: pointer;
-    }
+        background:#0065FC;
+        padding: 1%;
+        margin: 0;
+        height: 3.5em;
+        text-align: center;
+        border-top-right-radius: 1.1em;
+        border-bottom-right-radius: 1.1em;
+        color: white;
+        border:none;
+        font-weight: bold;
+        cursor: pointer;
+        }
     .click:hover{
         opacity:0.5;
     }
     #cherche{
         padding:0;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
         margin:0;
         height: 3.3em;
         width: 20%;
@@ -103,11 +106,10 @@
     }
     .filtre ul {
         display: flex;
-    width: 100%;
+        width: 100%;
     }
     .filtre ul li{
         padding: 1% 3% 1% 0;
-    
     }
     .filtre ul li a{
         color: black;
@@ -124,9 +126,13 @@
         background: #DEEBFF;
         border-radius: 100%;
         margin-right: 1.3em;
+        color: #0065FC;
     }
     .filtre ul li a:hover{
         color: #0065FC;
+    }
+    .fas.fa-info-circle{
+        color:#0065FC;
     }
 
     /* Style pour section hébergement*/
@@ -135,9 +141,8 @@
         display:flex;
         flex-direction:row;
         justify-content: space-between;
-    align-content:flex-start;
+        align-content:flex-start;
         margin: 2em 0;
-        
     }
     .col1{
         width:65%;
@@ -149,7 +154,6 @@
         justify-content: space-around;
         padding: 1em 0.5em;
     }
-
     .col1 h2{
         width: 85%;
         font-size: 1em;
@@ -157,29 +161,27 @@
     }
     .col2 h2{
         font-size: 1em;
-    padding: 1em 0.5em 1em 0.3em;
-    width: 85%;
-    display:flex;
-    justify-content: space-between;
+        padding: 1em 0.5em 1em 0.3em;
+        width: 85%;
+        display:flex;
+        justify-content: space-between;
     }
-
     .col1 .leshotels {
         width: 100%;
         display:flex;
         flex-direction: row;
         flex-wrap: wrap; 
-    justify-content: space-evenly;
+        justify-content: space-evenly;
         align-self: flex-start;
-    
     }
     .col1 .hotel{
         border-radius: 1em;
         background: white;
-    max-width:30%;
-    display:flex;
-    flex-direction: column;
-    flex-wrap:wrap;
-    text-decoration: none;
+        max-width:30%;
+        display:flex;
+        flex-direction: column;
+        flex-wrap:wrap;
+        text-decoration: none;
         margin-bottom: 3em;
         width: 30em;
         height: 14em;
@@ -194,6 +196,7 @@
         height:100%;
         border-top-left-radius: 1em;
         border-top-right-radius: 1em;
+        object-fit: cover;
     }
     .col1 .texte{
         color:black;
@@ -222,20 +225,18 @@
         flex-direction:column;
         flex-wrap:wrap;
         padding: 1em  0.5em;
-    justify-content: space-evenly;
+        justify-content: space-evenly;
         align-self: flex-start;
     }
-
     .col2 a{
         border-radius: 1em;
         background: white;
-    margin-bottom: 0.5em;
+        margin-bottom: 0.5em;
         display:flex;
-        
         flex-direction:row;
         flex-wrap: wrap;
         width:100%;
-    height: 26%;
+        height: 26%;
         text-decoration: none;
         height: 12em;
     }
@@ -245,8 +246,7 @@
         height: 95%;
         border-top-left-radius: 1em;
         border-bottom-left-radius: 1em;
-
-    }
+        }
     .col2 .photo img{
         overflow:hidden;
         width:100%;
@@ -254,6 +254,7 @@
         border-top-left-radius: 1em;
         border-bottom-left-radius: 1em;
         padding: 0em;
+        object-fit: cover;
     }
     .col2 .texte{
         width: 50%;
@@ -270,11 +271,18 @@
         font-weight:bold;
     }
     .texte p:nth-child(2) {
-        opacity: 0.5;
+        opacity: 0.8;
     }
     .star{
         text-shadow: none;
         padding: 0.3em;
+    }
+    .fas.fa-star.blue {
+        color: #0065FC;
+    }
+    .fas.fa-star.gray{
+        color:gray;
+        opacity: 0.5;
     }
 
     /* Style pour section activité */
@@ -313,7 +321,7 @@
     }
     .colonne1 img{
         height: 90%;
-        
+        object-fit: cover;
     }
     .colonne2{
         width:22%;
@@ -326,7 +334,6 @@
         height:47%;
         box-shadow: 0.2em 0.2em 0.2em #f6f6f6, -0.1em 0.2em #f6f6f6;
         border-radius: 1em;
-        
     }
     .act img{
         border-radius: 1em;
@@ -335,9 +342,10 @@
     .colonne2 .photo{
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+        object-fit: cover;
     }
     .colonne2 .act img {
-    height:80%; 
+        height:80%;  
     }
 
     /* Style pour footer */
@@ -347,8 +355,7 @@
         line-height: 1.7em; 
         font-size: 0.8em;
         background: #f2f2f2;
-        padding: 0.5em;
-        
+        padding: 0.5em; 
     }
     footer section {
         margin-right: 15%;
@@ -364,24 +371,44 @@
 /* style pour mobile max-width:767px */
 @media screen and (max-width:767px) {
     body{
-        margin: 1% auto;
+        margin: 2% auto;
         width: 90%;
-        border-right:solid 0.1em;
+        border-right:solid lightgray 0.1em;
         border-left:none;
         border-top:none;
         border-bottom:none;
         line-height: 1.7em;
     }
     /* style pour menu et logo */
-    .bar ul{
-        flex-direction: row;
-        flex-wrap:wrap;
+   .logo{
+        display: flex;
+        justify-content: space-around;
+    }
+    nav.bar{
+        display:grid;
+        width: 60%;
+    }
+    nav.bar ul {
+         width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: -2rem; 
+    }
+    nav.bar ul li{
+        padding: 0.7em 0rem 0.7rem 1.5rem;
+        margin-left:1rem;
+    }
+    .bar ul li a{
+        border-bottom: solid lightgray 0.1rem;  
     }
     .bar ul li a:hover{
-        color: black;
-        border-top: solid #0065FC 1px; 
-        transition: 0.3s;
+        border-bottom: solid #0065FC 0.1rem;
     }
+    .logo a:hover{
+       color: black;
+       border:none; 
+    }
+
     /* style pour barre de recherche*/
     .recherche .outil{
         text-align: center;
@@ -390,13 +417,14 @@
         width: 100%;
     }
     .outil .fas {
-        width: 10%;
+        width: 3rem;
         font-size: 1.7em;
-        padding: 0.2em 0.2em 0.55em 0.2em; 
+        padding: 0.2em 0em 0.5em 0em; 
     }
     #cherche{
         width: 50%;
     }
+
     /* style pour le filtre */
     .filtre ul {
         display: flex;
@@ -411,24 +439,26 @@
     .filtre ul li a{
         font-size: 0.9em;
     }
+
     /*style pour hebergement*/
     #hebergement{
-    display:flex;
-    flex-direction:column-reverse;
-    margin: 2em 0;
-    align-content:  space-between;
-    justify-content: space-between;
+        display:flex;
+        flex-direction:column-reverse;
+        margin: 2em 0;
+        align-content:  space-between;
+        justify-content: space-between;
     }
-      .col2{
-        width:90%;
+    .col2{
+        width:96%;
     }
     .col2 a {
         height: 10em;
     }
     .col1{
-        width:90%;
+        width:96%;
         flex-direction:column;
         margin-top: 2em;
+        background:white;
     }
     .col1 .leshotels{
         flex-direction:column;
@@ -443,12 +473,19 @@
     .col1 .plus{
         padding: 0.5em 0.3em;
     }
+    .star.starblue{
+        color: #0065FC;
+    }
+    .star.stargray{
+        color: #f1f1f1;
+    }
+
     /* style activité */
     #activite{
         flex-direction:column;
     }
     .colonne1{
-        width: 95%;
+        width: 98%;
         margin: 1.2em 0.2em;
         height: 18em;
     }
@@ -462,8 +499,8 @@
     }
     .colonne2 a {
         height: 16em;
-       /* margin: 1.2em 0.3em;*/
     }
+
     /* style pour footer*/
     footer{
         flex-direction:column;
@@ -474,90 +511,116 @@
 } 
 @media screen and (min-width:768px) and (max-width:1023px) {
     
-        /* style bar de recherche*/
-       .outil .fas {
-           width: 2em;
-           padding: 0.9em 0.7em;
-       }
-      
-       #cherche{
-           width: 35%;
-       }
+    /* style pour bar menu */
+    
+    .logo{
+        display: flex;
+        width:100%;
+    }
+   .inscription{
+        align-self: center;
+    }
+    nav.bar{
+        display:flex;
+        align-self: flex-end;
+    }
+    nav.bar ul {
+       display: flex;
+        justify-content: space-between;
+        align-self: flex-end;
+    }
+    nav.bar ul li{
+        padding: 0.7em 2.5em;
+         margin-left: 1rem;
+    }
+
+   /* style bar de recherche*/
+    .outil .fas {
+        width: 2rem;
+        padding:0.5rem 0.5rem 0.9rem 0.5rem;
+        font-size: 1.5em;
+    }
+    #cherche{
+        width: 35%;
+    }
+
        /* style pour le filtre*/
-       
-       .filtre ul {
-           flex-wrap:wrap;
-           width: 100%;
-          /* justify-content: space-around;*/
-       }
-       .filtre ul li{
-           width: 45%;
-          
-           /*! padding: 1% -3% -1% 1%; */
-       }
-       .filtre ul li a{
-           padding: 0.5em 0.5em 0.5em 0;
-           
-       }
-       .filtre ul li a .fas{
-           padding: 0.5em;
-           width:1.3em;
-           margin-right: 0.3em;
-       }
+    .filtre ul {
+        display:grid;
+        grid-template-areas: "a a"
+                             "b c"
+                             "d e"
+    }
+    .filtre ul li:first-child{
+        grid-area: a;
+    }
+    .filtre ul li:nth-child(2){
+        grid-area:b;
+    }
+    .filtre ul li:nth-child(3){
+         grid-area:d;
+    }
+    .filtre ul li:nth-child(4){
+        grid-area:c;
+    }
+    .filtre ul li:last-child{
+        grid-area:e;    
+    }
+  
        /* style pour hebergement */
-       #hebergement{
-           flex-direction:column;  
-       }
-       .col1{
-           width: 97.5%;
-       }
-       .col1 .hotel{
-           width: 30em;
-           height: 16em;
-           margin-bottom: 1.5em;
-       }
-       .col1 .photo{
-           width: 96%;
-           padding:0.3em;
-           height:60%;
-       }
-       .col1 .hotel img {
-           height: 10em;
-       }
-       .col1 .plus{
-           padding: 1em;
-       }
-       .col2 {
-           width: 97.5%;
-           margin-top: 1.5em;
-           display:flex;
-           flex-direction:row;
-           justify-content: space-evenly;
-       }
-       .col2 a{
-       display:flex;
-       flex-direction:column;
-       flex-wrap: wrap;
-       width:30%;
-      height: 16em;
-       justify-content: flex-start;
-       }
-       .col2 .photo{
-      width: 95%;
-      height: 60%;
-   }
-       .col2 .photo img{
-           border-top-right-radius: 1em;
-           border-bottom-left-radius:0;
-           height: 10em;
-           width:100%;
-       }
-       .col2 .texte{
-       width: 100%;
-           padding: 0.5em 0.5em;
-       }
+    #hebergement{
+        flex-direction:column;  
+    }
+    .col1{
+        width: 97.5%;
+    }
+    .col1 .hotel{
+        width: 30em;
+        height: 16em;
+        margin-bottom: 1.5em;
+    }
+    .col1 .photo{
+        width: 96%;
+        padding:0.3em;
+        height:60%;
+    }
+    .col1 .hotel img {
+        height: 10em;
+    }
+    .col1 .plus{
+        padding: 1em;
+    }
+    .col2 {
+        width: 97.5%;
+        margin-top: 1.5em;
+        display:flex;
+        flex-direction:row;
+        justify-content: space-evenly;
+    }
+    .col2 a{
+         display:flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+        width:30%;
+        height: 16em;
+        justify-content: flex-start;
+    }
+    .col2 .photo{
+        width: 95%;
+        height: 60%;
+    }
+    .col2 .photo img{
+        border-top-right-radius: 1em;
+        border-bottom-left-radius:0;
+        height: 10em;
+        width:100%;
+    }
+    .col2 .texte{
+        width: 100%;
+        padding: 0.5em 0.5em;
+    }
        
-       /*style pour activité */
-   
-       
-   }
+    /*style pour activité */
+    /*style pour footer*/
+  
+}
