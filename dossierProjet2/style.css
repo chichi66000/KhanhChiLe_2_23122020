@@ -1,4 +1,7 @@
 /* style générale du body */
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap";);
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap";);
+
 * , html{
     margin:0;
     padding:0;
@@ -22,6 +25,7 @@
     .logo{
         display: flex;
         justify-content: space-between;
+         margin-bottom: 1rem;
     }
     nav.bar{
         display:flex;
@@ -34,17 +38,30 @@
        justify-self: flex-end;
         }
         nav.bar ul li{
-       padding: 0em 1em;
+       padding: 1.5rem 1rem;
         }
-    .logo a{
-        color:  #0065FC;
+    .logo ul li a {
+        color:  black;
         font-weight: 500;
+        padding: 1.5rem 0.5rem;
     }
-    .logo a:hover{
-        color: black;
-        border-top: solid #0065FC 1px; 
+    .logo li:hover{
+        color: #0065FC;
+        border-top: solid #0065FC 0.2rem; 
         transition: 0.3s;
     }
+    .inscription{
+    color:#0065FC;
+    padding-top:1.5rem;
+    }
+    .inscription:hover{
+    border-top: solid #0065FC 0.2rem; 
+    
+}
+/*.logo :last-child :hover{
+    border-top: solid #0065FC 0.2rem; 
+    transition: 0.3s;
+}
     /* style pour barre de recherche*/
     .recherche p{
         line-height: 1.7em;
@@ -256,12 +273,20 @@
     }
     .col2 .texte{
         width: 50%;
-        padding: 0.5em;
+        padding:  1em 0.5em;
         font-size: 0.8em;
+        line-height: 1.7em;
         align-self: center;
         color:black;
         text-decoration: none;
-    }
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        height: 80%;
+}
+.col2 .star{
+   align-self: flex-end;
+}
     .col2 .texte:hover{
         opacity:0.5;
     }
@@ -271,9 +296,10 @@
     .texte p:nth-child(2) {
         opacity: 0.8;
     }
-    .star{
+    .col2 .star{
         text-shadow: none;
-        padding: 0.3em;
+       /* padding: 0.3rem;
+       margin-top: 5rem;*/
     }
     .fas.fa-star.blue {
         color: #0065FC;
@@ -381,6 +407,7 @@
    .logo{
         display: flex;
         justify-content: space-between;
+      
     }
     .bar{
         display:flex;
@@ -388,28 +415,30 @@
     }
     nav.bar ul {
         display:flex;
-        justify-content: space-between;
+        /*! justify-content: space-between; */
         margin-left:0%;
     }
     nav.bar ul li{
-      /*  padding: 0.7em 0.7rem 0.7rem 0rem;*/
-        margin-left:0rem;
+         margin-left:0rem;
+        padding-right:0;
+    }
+    nav.bar ul li::marker{
+        width:0;
         
     }
-    .bar ul li a{
+    nav.bar ul li::marker {
+        display: none;
+    }
+    .logo li:hover{
+       border-bottom: solid #0065FC 0.2rem;
+        border-top: none;
+        transition: 0.3s;
+    }
+    .bar ul li {
         border-bottom: solid lightgray 0.1rem;
-        color:black;
-        font-weight:bold;
-    }
-    .bar ul li a:hover{
-        border-bottom: solid #0065FC 0.1rem;
-        color:  #0065FC;
-    }
-    .logo a:hover{
-       color: black;
-       border:none; 
-    }
-
+        padding-bottom: 0;
+     }
+   
     /* style pour barre de recherche*/
     .recherche .outil{
         text-align: center;
