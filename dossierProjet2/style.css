@@ -1,6 +1,6 @@
 /* style générale du body */
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap";);
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap";);
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap");
 
 * , html{
     margin:0;
@@ -25,7 +25,7 @@
     .logo{
         display: flex;
         justify-content: space-between;
-         margin-bottom: 1rem;
+        margin-bottom: 1em;
     }
     nav.bar{
         display:flex;
@@ -45,23 +45,21 @@
         font-weight: 500;
         padding: 1.5rem 0.5rem;
     }
+    .logo ul li a:hover{
+        color: #0065FC;
+    }
     .logo li:hover{
         color: #0065FC;
         border-top: solid #0065FC 0.2rem; 
         transition: 0.3s;
     }
     .inscription{
-    color:#0065FC;
-    padding-top:1.5rem;
+        color:#0065FC;
+        padding-top:1.5rem;
     }
     .inscription:hover{
-    border-top: solid #0065FC 0.2rem; 
-    
-}
-/*.logo :last-child :hover{
-    border-top: solid #0065FC 0.2rem; 
-    transition: 0.3s;
-}
+         border-top: solid #0065FC 0.2rem; 
+    }
     /* style pour barre de recherche*/
     .recherche p{
         line-height: 1.7em;
@@ -158,6 +156,7 @@
         justify-content: space-between;
         align-content:flex-start;
         margin: 2em 0;
+        line-height: 1.2em;
     }
     .col1{
         width:65%;
@@ -223,7 +222,6 @@
         opacity:0.5;
     }
     .col1 .plus{
-        width:95%;
         color:black;
         text-decoration: none;
         padding: 0.5em 1em;
@@ -268,7 +266,7 @@
         height:95%;
         border-top-left-radius: 1em;
         border-bottom-left-radius: 1em;
-        padding: 0em;
+        padding: 0;
         object-fit: cover;
     }
     .col2 .texte{
@@ -283,23 +281,22 @@
         flex-direction:row;
         flex-wrap:wrap;
         height: 80%;
-}
-.col2 .star{
-   align-self: flex-end;
-}
+    }
+    .col2 .texte p{
+        height:80%;
+        font-weight:900;
+    }
+    .col2 .texte .flou {
+        font-weight: 300;
+    }
     .col2 .texte:hover{
         opacity:0.5;
     }
     .texte p:first-child {
         font-weight:bold;
     }
-    .texte p:nth-child(2) {
-        opacity: 0.8;
-    }
-    .col2 .star{
+    .star{
         text-shadow: none;
-       /* padding: 0.3rem;
-       margin-top: 5rem;*/
     }
     .fas.fa-star.blue {
         color: #0065FC;
@@ -386,10 +383,9 @@
     }
     footer a{
         color:black;
-        opacity:0.8;
     }
     footer a:hover {
-        opacity:1;
+        opacity:0.8;
     }
 
 /* style pour mobile max-width:767px */
@@ -407,7 +403,6 @@
    .logo{
         display: flex;
         justify-content: space-between;
-      
     }
     .bar{
         display:flex;
@@ -415,30 +410,20 @@
     }
     nav.bar ul {
         display:flex;
-        /*! justify-content: space-between; */
         margin-left:0%;
     }
     nav.bar ul li{
-         margin-left:0rem;
-        padding-right:0;
-    }
-    nav.bar ul li::marker{
-        width:0;
-        
-    }
-    nav.bar ul li::marker {
-        display: none;
+        margin-left:0rem; 
+        border-bottom: solid lightgray 0.1rem;
     }
     .logo li:hover{
        border-bottom: solid #0065FC 0.2rem;
         border-top: none;
         transition: 0.3s;
     }
-    .bar ul li {
-        border-bottom: solid lightgray 0.1rem;
-        padding-bottom: 0;
-     }
-   
+    .inscription:hover {
+        border-top:none;
+    }
     /* style pour barre de recherche*/
     .recherche .outil{
         text-align: center;
@@ -490,24 +475,21 @@
         margin-top: 2em;
         background:white;
     }
+    .col1 a {
+        height: 15em;
+    }
     .col1 .leshotels{
         flex-direction:column;
         width:100%;
     }
     .col1 .hotel {
-        max-width: 100%;
+       max-width: 100%;
         margin: 0.5em auto;
-        height: 16em;
-        line-height: 1.5em;
+        box-shadow: 0.5em 0.5em 0.5em lightgray;
     }
     .col1 .plus{
         padding: 0.5em 0.3em;
-    }
-    .star.starblue{
-        color: #0065FC;
-    }
-    .star.stargray{
-        color: #f1f1f1;
+        height:1em;
     }
 
     /* style activité */
@@ -539,7 +521,7 @@
         margin: 1em 0.3em;
     }
 } 
-@media screen and (min-width:768px) and (max-width:1023px) {
+@media screen and (min-width:768px) and (max-width:1024px) {
     
     /* style pour bar menu */
     
@@ -547,24 +529,19 @@
         display: flex;
         width:100%;
     }
-   .inscription{
-        align-self: center;
+    .bar{
+        display:grid;
     }
-    nav.bar{
-        display:flex;
-        align-self: flex-start;
+    .bar img{
+        grid-column: 1;
     }
-    nav.bar ul {
-       display: flex;
-        justify-content: space-between;
-        align-self: center;
-        margin-left: 5%;
+    .bar ul{
+        grid-column: 2;
+        display: grid;
     }
-    nav.bar ul li{
-        padding: 0.7em 2.5em;
-         margin-left: 1rem;
+    nav.bar ul{
+        margin-left: 45%;
     }
-
    /* style bar de recherche*/
     .outil .fas {
         width: 2rem;
@@ -599,14 +576,13 @@
     }
   
        /* style pour hebergement */
-    #hebergement{
+       #hebergement{
         flex-direction:column;  
     }
     .col1{
         width: 97.5%;
     }
     .col1 .hotel{
-        width: 30em;
         height: 16em;
         margin-bottom: 1.5em;
     }
@@ -614,9 +590,6 @@
         width: 96%;
         padding:0.3em;
         height:60%;
-    }
-    .col1 .hotel img {
-        height: 10em;
     }
     .col1 .plus{
         padding: 1em;
@@ -632,25 +605,27 @@
          display:flex;
         flex-direction:column;
         flex-wrap: wrap;
-        width:30%;
+        max-width:30%;
         height: 16em;
-        justify-content: flex-start;
+        margin-bottom: 1.5em;
     }
     .col2 .photo{
-        width: 95%;
-        height: 60%;
+        width:96%;
+        padding:0.3em;
+        height:60%;
     }
     .col2 .photo img{
         border-top-right-radius: 1em;
         border-bottom-left-radius:0;
-        height: 10em;
         width:100%;
+       
     }
     .col2 .texte{
+        height: 30%;
+        display: inline;
         width: 100%;
-        padding: 0.5em 0.5em;
+        padding: 0.3em;
     }
-       
     /*style pour activité */
     /*style pour footer*/
   
